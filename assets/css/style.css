@@ -84,8 +84,7 @@ strong {
   font-family: montserrat; }
 
 body {
-   background-color: #f1f1f145 !important;
-  /* background-color: #f1f1f145 !important; */
+  background-color: #f1f1f145 !important;
   font-family: 'Merriweather', serif;
   color: #6A6A6A;
   overflow-x: hidden; }
@@ -233,9 +232,7 @@ html {
 header {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
   header .header-top {
-    /* background-color: #de1f26;  */
-    background-color: #343a40;
-  }
+    background-color: #de1f26; }
     header .header-top .col-det .ulleft li {
       float: left;
       padding: 11px;
