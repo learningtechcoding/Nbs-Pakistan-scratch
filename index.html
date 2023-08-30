@@ -136,6 +136,38 @@
         background-color: #28a745 !important;
         border-color: #28a745 !important;
         }
+        .backgroundImg{
+            /* background-image: url('./assets/images/blooddonation.jpg');
+            height: 70%;
+             background-size: 100%;
+              
+           object-fit: cover;
+            background-position: fixed; */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/images/blood-donor.png) repeat fixed 100%;
+    /* background-size: 100%; */
+    color: aliceblue;
+    position: relative;
+    
+    height: 50vh;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    /* background-position: 50% ,32%; */
+        }
+        .headingClr{
+            color: #fff !important;
+            font-weight: 500;
+        }
+        .backgroundcontainer{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .donateBtn:hover{
+            background-color: #28a745 !important;
+         outline: #28a745 !important;
+         border-color: #28a745 !important;
+        }
     </style>
 
 
@@ -386,7 +418,7 @@
         <div class="row pt-5">
             <div class="col-lg-4 col-md-6 mt-3">
                 <div class="card cardBorder">
-                    <img class="card-img-top cardImgtwo" src="./assets/images/boyimg.png" alt="Card image cap">
+                    <img class="card-img-top cardImgtwo" src="./assets/images/donate.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title fw-bolder">Help Turkey and Syria Earthquake Relief Fund </h5>
                         <!-- <p class="card-text cardPara"></p> -->
@@ -406,7 +438,7 @@
                                 <p><i class="fa-regular fa-heart heartIcon"></i> <small>10,580 supporters</small></p>
                             </div>
                             <!-- <a href="#" class="btn btn-danger p-0">Go somewhere</a> -->
-                            <button type="button" class="btn btn-danger px-3 viewBtn w-100">View More</button>
+                            <button type="button" class="btn btn-danger px-3 viewBtn w-100">View Details</button>
                         </div>
     
                     </div>
@@ -414,7 +446,7 @@
             </div>
             <div class="col-lg-4 col-md-6 mt-3">
                 <div class="card cardBorder">
-                    <img class="card-img-top cardImgtwo" src="./assets/images/boyimg.png" alt="Card image cap">
+                    <img class="card-img-top cardImgtwo" src="./assets/images/donate5.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title fw-bolder">Help Turkey and Syria Earthquake Relief Fund </h5>
                         <!-- <p class="card-text cardPara"></p> -->
@@ -432,7 +464,7 @@
                                 <p><i class="fa-regular fa-heart heartIcon"></i> <small>10,580 supporters</small></p>
                             </div>
                             <!-- <a href="#" class="btn btn-danger p-0">Go somewhere</a> -->
-                            <button type="button" class="btn btn-danger px-3 viewBtn w-100">View More</button>
+                            <button type="button" class="btn btn-danger px-3 viewBtn w-100">View Details</button>
                         </div>
     
                     </div>
@@ -440,7 +472,7 @@
             </div>
             <div class="col-lg-4 col-md-6 mt-3">
                 <div class="card cardBorder">
-                    <img class="card-img-top cardImgtwo" src="./assets/images/boyimg.png" alt="Card image cap">
+                    <img class="card-img-top cardImgtwo" src="./assets/images/donate4.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title fw-bolder">Help Turkey and Syria Earthquake Relief Fund </h5>
                         <!-- <p class="card-text cardPara"></p> -->
@@ -458,7 +490,7 @@
                                 <p><i class="fa-regular fa-heart heartIcon"></i> <small>10,580 supporters</small></p>
                             </div>
                             <!-- <a href="#" class="btn btn-danger p-0">Go somewhere</a> -->
-                            <button type="button" class="btn btn-danger px-3 viewBtn w-100">View More</button>
+                            <button type="button" class="btn btn-danger px-3 viewBtn w-100">View Details</button>
                         </div>
     
                     </div>
@@ -469,6 +501,28 @@
     </div>
     <!-- cards sectiontwo end  ----->
 
+  
+<!-- background card section start ------- -->
+<div class="conatiner-fluid backgroundImg">
+    <div class="container  backgroundcontainer">
+        <div class="text-center">
+            
+              
+                <h2 class="headingClr">
+                    Ready To Donate Blood
+                 </h2>
+                 <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, quis!</p>
+              
+                
+                
+                   <button type="button" class="btn btn-danger btn-lg px-5 donateBtn">Donate Blood</button>
+               
+        </div>
+   
+    </div>
+
+</div>
+<!-- background card section end ------- -->
 
     <!-- Testimonial Start  -->
 
@@ -571,23 +625,9 @@
             </div>
         </section>
     </div>
-
-   
-
-   
-
-
+  
     <!-- Testimonial Start  -->
-    
-    
-
-
-
-
-
-    
-
-
+ 
     <!-- accordion start -->
     <div class="bg-white">
         <div class="container  py-5">
