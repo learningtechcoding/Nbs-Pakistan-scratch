@@ -9,6 +9,56 @@ Description: This Template is created for Youtubers
 /* ===================================== Import Less ================================== */
 /* ===================================== Basic CSS ==================================== */
 
+ 
+
+/* card */
+
+
+.container-fluid {
+    padding: 20px;
+}
+.card-image {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.card-image img {
+    border-radius: 10px 10px 0px 0px;
+    transition: transform 0.3s;
+}
+.card-border {
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    position: relative;
+}
+.details {
+    display: none;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.card-border:hover .card-image img {
+    transform: scale(1.1);
+}
+.button-color
+{
+    color: red;
+    font-weight: bold;
+}
+.show-more-button
+{
+    color: red;
+}
+
+/* card */
+
+
+ 
 * {
   margin: 0px;
   padding: 0px;
