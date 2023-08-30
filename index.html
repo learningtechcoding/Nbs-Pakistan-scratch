@@ -67,6 +67,21 @@
     <!-- <link rel="stylesheet" href="css/style.css" /> -->
 
     <!-- Testimonial css Link End -->
+
+    <!-- auto page links  -->
+    
+    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/fav.jpg">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" href="assets/plugins/grid-gallery/css/grid-gallery.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- auto page links  -->
     <style>
       .headingB {
         border-bottom: 2px solid red;
@@ -189,6 +204,28 @@
          outline: #28a745 !important;
          border-color: #28a745 !important;
         }
+ 
+        .faqBack{
+            background-color: #FBFBFB !important;
+            /* box-shadow: 0 4px 18px 16px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+
+        }
+
+
+        /* auto page css  */
+        .number
+        {
+            font-size: 40px;
+            color: red;
+            font-weight: 600;
+        }
+        .box
+        {
+            /* box-shadow: 0 4px 18px 16px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+            background-color: #fff !important;
+        }
+        
+        /* auto page css  */
  
     </style>
   </head>
@@ -886,8 +923,49 @@
         </div>
       </section>
     </div>
+
+    <!-- auto start  -------------->
+    <!-- auto -->
+<div class="container-fluid">
+
+    <div class="row justify-content-center box">
+        <div class="col-12 col-sm-8">
+            <div id="projectFacts" class="sectionClass">
+                <div class="fullWidth eight columns">
+                    <div class="row projectFactsWrap py-5">
+                        <div class="col-lg-4 col-md-6 col-12 item wow fadeInUpBig animated animated text-center"
+                            data-number="20" style="visibility: visible">
+                            <i class="fa-solid fa-users fa-3x"></i>
+                            <p id="number1" class="number">20</p>
+                            <span></span>
+                            <p>Worldwide Clients</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12 item wow fadeInUpBig animated animated text-center"
+                            data-number="7079" style="visibility: visible">
+                            <i class="fa-solid fa-brush fa-3x"></i>
+                            <p id="number2" class="number">7079</p>
+                            <span></span>
+                            <p>Store Clients Products</p>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-12 item wow fadeInUpBig animated animated text-center"
+                            data-number="1043" style="visibility: visible">
+                            <i class="fa-solid fa-bacon fa-3x"></i>
+                            <p id="number3" class="number">1043</p>
+                            <span></span>
+                            <p>Total Km Reach So Far</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> 
+<!-- auto -->
+    <!-- auto end  -------------->
  
     <!-- accordion start -->
+ 
     <div class="bg-white">
       <div class="container py-5">
         <h1 class="text-center masterheading">FAQ</h1>
@@ -982,6 +1060,7 @@
                   Canada
                 </p>
               </div>
+ 
  
     <!-- accordion end -->
 
@@ -1195,11 +1274,272 @@
           playSlide((currentSlide += 1));
         });
 
+ 
+  
+
+
+
+
+                <!-- Testimonial  -->
+
+                <script src="https://use.fontawesome.com/1744f3f671.js"></script>
+
+
+                <script>
+                    // vars
+                    'use strict'
+                    var testim = document.getElementById("testim"),
+                        testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+                        testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+                        testimLeftArrow = document.getElementById("left-arrow"),
+                        testimRightArrow = document.getElementById("right-arrow"),
+                        testimSpeed = 4500,
+                        currentSlide = 0,
+                        currentActive = 0,
+                        testimTimer,
+                        touchStartPos,
+                        touchEndPos,
+                        touchPosDiff,
+                        ignoreTouch = 30;
+                    ;
+
+                    window.onload = function () {
+
+                        // Testim Script
+                        function playSlide(slide) {
+                            for (var k = 0; k < testimDots.length; k++) {
+                                testimContent[k].classList.remove("active");
+                                testimContent[k].classList.remove("inactive");
+                                testimDots[k].classList.remove("active");
+                            }
+
+                            if (slide < 0) {
+                                slide = currentSlide = testimContent.length - 1;
+                            }
+
+                            if (slide > testimContent.length - 1) {
+                                slide = currentSlide = 0;
+                            }
+
+                            if (currentActive != currentSlide) {
+                                testimContent[currentActive].classList.add("inactive");
+                            }
+                            testimContent[slide].classList.add("active");
+                            testimDots[slide].classList.add("active");
+
+                            currentActive = currentSlide;
+
+                            clearTimeout(testimTimer);
+                            testimTimer = setTimeout(function () {
+                                playSlide(currentSlide += 1);
+                            }, testimSpeed)
+                        }
+
+                        testimLeftArrow.addEventListener("click", function () {
+                            playSlide(currentSlide -= 1);
+                        })
+
+                        testimRightArrow.addEventListener("click", function () {
+                            playSlide(currentSlide += 1);
+                        })
+
+                        for (var l = 0; l < testimDots.length; l++) {
+                            testimDots[l].addEventListener("click", function () {
+                                playSlide(currentSlide = testimDots.indexOf(this));
+                            })
+                        }
+
+                        playSlide(currentSlide);
+
+                        // keyboard shortcuts
+                        document.addEventListener("keyup", function (e) {
+                            switch (e.keyCode) {
+                                case 37:
+                                    testimLeftArrow.click();
+                                    break;
+
+                                case 39:
+                                    testimRightArrow.click();
+                                    break;
+
+                                case 39:
+                                    testimRightArrow.click();
+                                    break;
+
+                                default:
+                                    break;
+                            }
+                        })
+
+                        testim.addEventListener("touchstart", function (e) {
+                            touchStartPos = e.changedTouches[0].clientX;
+                        })
+
+                        testim.addEventListener("touchend", function (e) {
+                            touchEndPos = e.changedTouches[0].clientX;
+
+                            touchPosDiff = touchStartPos - touchEndPos;
+
+                            console.log(touchPosDiff);
+                            console.log(touchStartPos);
+                            console.log(touchEndPos);
+
+
+                            if (touchPosDiff > 0 + ignoreTouch) {
+                                testimLeftArrow.click();
+                            } else if (touchPosDiff < 0 - ignoreTouch) {
+                                testimRightArrow.click();
+                            } else {
+                                return;
+                            }
+
+                        })
+                    }
+                </script>
+                <!-- Testimonial End   -->
+
+
+
+
+
+
+
+                <script src="assets/js/jquery-3.2.1.min.js"></script>
+                <script src="assets/js/popper.min.js"></script>
+                <script src="assets/js/bootstrap.min.js"></script>
+                <script src="assets/plugins/grid-gallery/js/grid-gallery.min.js"></script>
+                <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+                <script src="assets/js/script.js"></script>
+
+
+                <!-- Gallary Script  -->
+                <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+                <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+                <script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+
+
+                <!-- accordian -->
+                <script>
+                    let accordianHead = Array.from(document.querySelectorAll(".accordian_head"));
+
+                    accordianHead.map((item) =>
+                        item.addEventListener("click", () => {
+                            closeAllAccordian(item);
+                        })
+                    );
+
+                    function closeAllAccordian(current_target) {
+                        console.log(current_target);
+                        accordianHead.map((item) => {
+                            if (current_target !== item) {
+                                const accordianBody = item.nextElementSibling;
+                                const togglerBtn = item.firstElementChild;
+                                togglerBtn.classList.remove("active");
+                                accordianBody.classList.remove("active_body");
+                            } else {
+                                const accordianBody = current_target.nextElementSibling;
+                                const togglerBtn = item.firstElementChild;
+                                togglerBtn.classList.toggle("active");
+                                accordianBody.classList.toggle("active_body");
+                            }
+                        });
+                    }
+                </script>
+                <!-- accordian -->
+
+
+
+                <script>
+                    $('.portfolio-menu ul li').click(function () {
+                        $('.portfolio-menu ul li').removeClass('active');
+                        $(this).addClass('active');
+
+                        var selector = $(this).attr('data-filter');
+                        $('.portfolio-item').isotope({
+                            filter: selector
+                        });
+                        return false;
+                    });
+                    $(document).ready(function () {
+                        var popup_btn = $('.popup-btn');
+                        popup_btn.magnificPopup({
+                            type: 'image',
+                            gallery: {
+                                enabled: true
+                            }
+                        });
+                    });
+                </script>
+
+                <!-- Gallary Script  -->
+
+                <!-- auto script  ---------------->
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script>
+
+    $.fn.jQuerySimpleCounter = function (options) {
+        var settings = $.extend({
+            start: 0,
+            end: 100,
+            easing: 'swing',
+            duration: 400,
+            complete: ''
+        }, options);
+
+        var thisElement = $(this);
+
+        $({ count: settings.start }).animate({ count: settings.end }, {
+            duration: settings.duration,
+            easing: settings.easing,
+            step: function () {
+                var mathCount = Math.ceil(this.count);
+                thisElement.text(mathCount);
+            },
+            complete: settings.complete
+        });
+    };
+
+
+    $('#number1').jQuerySimpleCounter({ end: 20, duration: 3000 });
+    $('#number2').jQuerySimpleCounter({ end: 7079, duration: 3000 });
+    $('#number3').jQuerySimpleCounter({ end: 1043, duration: 2000 });
+
+</script>
+<!-- auto -->
+
+ 
+ <script src="assets/js/jquery-3.2.1.min.js"></script>
+ <script src="assets/js/popper.min.js"></script>
+ <script src="assets/js/bootstrap.min.js"></script>
+ <script src="assets/plugins/grid-gallery/js/grid-gallery.min.js"></script>
+ <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+ <script src="assets/js/script.js"></script>
+
+
+
+ <!-- Gallary Script  -->
+
+ <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+
+                <!-- auto script  ---------------->
+
+</body>
+ 
         for (var l = 0; l < testimDots.length; l++) {
           testimDots[l].addEventListener("click", function () {
             playSlide((currentSlide = testimDots.indexOf(this)));
           });
         }
+ 
 
         playSlide(currentSlide);
 
