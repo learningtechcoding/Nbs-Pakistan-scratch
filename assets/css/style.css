@@ -666,7 +666,9 @@ footer .content-ro h2 {
 footer .content-ro .footer-contact .address-row {
   display: flex;
   margin-top: 10px;
+ 
   align-items: baseline;
+ 
 }
 
 footer .content-ro .footer-contact .address-row .icon {
@@ -828,11 +830,14 @@ footer .footer-copy .socila-link ul li a {
 }
 
 .blog-container .news-row .news-card:hover {
+ 
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .news-card .image {
   border-right: 3px solid #DE1F26;
+ 
+ 
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -1018,12 +1023,14 @@ section {
   margin-top: 5px;
 }
 
+ 
 .footer-links ul li a {
   list-style: none;
   text-decoration: none;
   color: #fff;
 }
 
+ 
 @media(max-width:992px) {
   .howworksec {
     text-align: center;
@@ -1040,4 +1047,39 @@ section {
 }
 
 
+ 
 /*#####################> Process  End <############ */
+ 
+/*#####################> Process  End <############ */
+
+
+/*######################> Pagination Start <#########*/
+.page-item.active .page-link {
+
+  z-index: 1;
+  color: #fff;
+  background-color: #DE1F26 !important;
+  border-color: #DE1F26 !important;
+}
+
+.page-item.active .page-link:focus {
+  box-shadow: none;
+  outline: none;
+
+
+}
+
+.borderRight {
+  border-right: 2px solid red !important;
+
+}
+
+.cardFooterText {
+  font-size: 12px;
+}
+
+/*######################> Pagination End<#########*/
+.card-body {
+  padding: 0.5rem !important;
+}
+ 
