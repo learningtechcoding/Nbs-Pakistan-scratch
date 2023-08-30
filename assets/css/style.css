@@ -625,3 +625,89 @@ section {
       border-radius: 10px;
       background-color: red;
     }
+
+    /*#####################> Process  Start <############ */
+     
+ 
+.how-work {
+  padding: 40px 0;
+}
+.howworksec {
+  text-align: center;
+  margin: 40px 0 0;
+  position: relative;
+  background: url(../images/hiwbg.png) no-repeat center 50px;
+}
+.howwork {
+  float: left;
+  width: 100%;
+  text-align: center;
+  /* padding: 0 30px; */
+}
+.howwork:hover > i {
+  color: #fb3b44;
+}
+.howwork .iconround {
+  float: none;
+  display: inline-block;
+  font-size: 65px;
+  background: #fff;
+  color: #DE1F26;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.howwork .iconround .steps {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #DE1F26;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  top: 15px;
+  left: -15px;
+}
+.howwork h3 {
+  float: left;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  color: #212121;
+  margin-top: 30px;
+  margin-bottom: 12px;
+}
+.howwork p {
+  float: left;
+  width: 100%;
+  font-size: 15px;
+  color: #8d8d8d;
+  margin: 0;
+  line-height: 24px;
+  padding: 0 20px;
+  margin-top: 5px;
+}
+
+@media(max-width:992px)
+{
+    .howworksec {
+  text-align: center;
+  margin: 40px 0 0;
+  position: relative;
+  background: url(../img/h) no-repeat center 50px;
+}
+}
+@media(max-width:554px)
+{
+  .masterheading{
+    font-size: 28px;
+  }
+}
+   
+
+    /*#####################> Process  End <############ */
