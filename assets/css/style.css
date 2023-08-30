@@ -9,6 +9,7 @@ Description: This Template is created for Youtubers
 /* ===================================== Import Less ================================== */
 /* ===================================== Basic CSS ==================================== */
 
+ 
 
 /* card */
 
@@ -57,11 +58,13 @@ Description: This Template is created for Youtubers
 /* card */
 
 
+ 
 * {
   margin: 0px;
   padding: 0px;
   list-style: none; }
 
+ 
 img {
   max-width: 100%; }
 
@@ -582,7 +585,7 @@ section {
 }
 
 .accordian {
-  max-width: 950px;
+  /* max-width: 950px; */
   padding: 0.1rem;
   padding-bottom: -20px !important;
   background-color: white !important;
@@ -654,3 +657,21 @@ section {
   line-height: 1.2rem;
 }
     /* accodion   */
+
+    .masterheading{
+      position: relative;
+      text-align: center;
+    }
+    .masterheading::before{
+      content: '';
+      position: absolute;
+      width: 150px;
+      
+      top: 120%;
+      left: 50%;
+      transform: translate(-50%,50%);
+      
+      height: 3px ;
+      border-radius: 10px;
+      background-color: red;
+    }
