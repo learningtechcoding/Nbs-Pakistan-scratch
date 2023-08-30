@@ -666,6 +666,9 @@ footer .content-ro h2 {
 footer .content-ro .footer-contact .address-row {
   display: flex;
   margin-top: 10px;
+ 
+  align-items: baseline;
+ 
 }
 
 footer .content-ro .footer-contact .address-row .icon {
@@ -827,56 +830,14 @@ footer .footer-copy .socila-link ul li a {
 }
 
 .blog-container .news-row .news-card:hover {
-  box-shadow: 0 2px 5px 0 rgba(218, 10, 10, 0.705), 0 2px 10px 0 rgba(216, 10, 10, 0.548);
+ 
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.news-card {
-  width: 100%;
-  height: 10rem;
-
-
-
-}
-
-
-
-/* srtting of scroll bar */
-
-/* This is the entire scrollbar */
-::-webkit-scrollbar {
-  width: 2px;
-}
-
-/* This is the track (or progress bar) of the scrollbar */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* This is the handle (or thumb) */
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-body {
-  scrollbar-color: rebeccapurple green;
-
-}
-
-/* end setting of scroll bar */
-.overFlowText {
-  height: 5rem;
-  overflow: auto;
-}
-
-.news-card .image img {
+.news-card .image {
   border-right: 3px solid #DE1F26;
-  width: 200px;
-  height: 100%;
+ 
+ 
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -1062,6 +1023,14 @@ section {
   margin-top: 5px;
 }
 
+ 
+.footer-links ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+ 
 @media(max-width:992px) {
   .howworksec {
     text-align: center;
@@ -1078,6 +1047,9 @@ section {
 }
 
 
+ 
+/*#####################> Process  End <############ */
+ 
 /*#####################> Process  End <############ */
 
 
@@ -1097,5 +1069,17 @@ section {
 
 }
 
+.borderRight {
+  border-right: 2px solid red !important;
+
+}
+
+.cardFooterText {
+  font-size: 12px;
+}
 
 /*######################> Pagination End<#########*/
+.card-body {
+  padding: 0.5rem !important;
+}
+ 
