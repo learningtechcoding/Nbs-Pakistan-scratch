@@ -838,6 +838,19 @@ footer .footer-copy .socila-link ul li a {
 
 }
 
+.newsCard {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.cardText {
+  font-size: 14px !important;
+}
+
+.newsCard img {
+  height: 100%;
+}
+
+
 
 
 /* srtting of scroll bar */
@@ -1097,5 +1110,16 @@ section {
 
 }
 
+.borderRight {
+  border-right: 2px solid red !important;
+
+}
+
+.cardFooterText {
+  font-size: 12px;
+}
 
 /*######################> Pagination End<#########*/
+.card-body {
+  padding: 0.5rem !important;
+}
