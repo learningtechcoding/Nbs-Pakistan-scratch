@@ -566,8 +566,15 @@ footer {
             padding: 0px 5px; }
       .blog-container .news-row .news-card:hover {
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
- .news-card .image{
+
+        .news-card{
+          width: 100%;
+          
+        }
+ .news-card .image img{
   border-right:3px solid #DE1F26;
+  width: 200px;
+  height: 100%;
  }
 /*# sourceMappingURL=style.css.map */
 
@@ -761,3 +768,22 @@ section {
    
 
     /*#####################> Process  End <############ */
+
+
+    /*######################> Pagination Start <#########*/
+    .page-item.active .page-link{
+
+        z-index: 1;
+    color: #fff ;
+    background-color: #DE1F26 !important;
+    border-color: #DE1F26 !important;
+}
+    .page-item.active .page-link:focus{
+      box-shadow: none;
+      outline: none;
+
+ 
+}
+ 
+ 
+    /*######################> Pagination End<#########*/
